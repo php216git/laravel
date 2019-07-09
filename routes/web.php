@@ -103,8 +103,6 @@ Route::resource('/adminlogin','Admin\AdminLoginController');
 
 
 Route::group(['middleware'=>'login'],function(){
-	// 模板继承的练习  搭建后台
-	Route::resource('/admin','Admin\AdminController');
 
 
 	// 后台管理员模块
