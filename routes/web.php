@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+<<<<<<< dev
+=======
 // 模板继承的练习  搭建后台
 Route::resource('/admin','Admin\AdminController');
 
@@ -23,3 +22,4 @@ Route::resource("/admincates","Admin\CatesController");
 
 //前台首页
 Route::resource("/homeindex","Home\IndexController");
+>>>>>>>
