@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< dev
 
 
 
@@ -46,4 +47,7 @@ Route::group(['middleware'=>'login'],function(){
 	// 友情连接
 	Route::resource('/adminyouqing','Admin\YouqingController');
 });
+
+=======
+<<<<<<< dev
 
