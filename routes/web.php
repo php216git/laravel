@@ -22,89 +22,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 后台登录和退出
 Route::resource('/adminlogin','Admin\AdminLoginController');
- 
-
-
 Route::group(['middleware'=>'login'],function(){
-
-
 	// 后台管理员模块
 	Route::resource('/adminuser','Admin\AdminuserController');
 	// 分配角色
@@ -121,12 +41,8 @@ Route::group(['middleware'=>'login'],function(){
 
 	// 权限管理
 	Route::resource('/auth','Admin\AuthController');
-
-
-
 	// 后台轮播图路由
 	Route::resource('/adminbanner','Admin\BannerController');
-
 	// 友情连接
 	Route::resource('/adminyouqing','Admin\YouqingController');
 });
