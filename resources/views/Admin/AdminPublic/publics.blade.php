@@ -188,12 +188,12 @@
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        Hello, John Doe
+                        Hello, {{session ('adminname')}}
                     </div>
                     <ul>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
+                        <li><a href="/adminlogin">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -249,6 +249,27 @@
                         <ul class="closed">
                             <li><a href="/adminuser/create">管理员添加</a></li>
                             <li><a href="/adminuser">管理员列表</a></li>
+                            <li><a href="/adminroles/create">角色添加</a></li>
+                            <li><a href="/adminroles">角色列表</a></li>
+                            <li><a href="/auth/create">权限添加</a></li>
+                            <li><a href="/auth">权限列表</a></li>
+                        </ul>
+
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="icon-file"></i> 轮播图管理</a>
+                        <ul class="closed">
+                            <li><a href="/adminbanner/create">轮播图添加</a></li>
+                            <li><a href="/adminbanner">轮播图列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-file"></i> 友情链接管理</a>
+                        <ul class="closed">
+                            <li><a href="/adminyouqing/create">友情链接添加</a></li>
+                            <li><a href="/adminyouqing">友情链接列表</a></li>
                         </ul>
                     </li>
 
