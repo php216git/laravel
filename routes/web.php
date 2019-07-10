@@ -22,6 +22,9 @@
 
 
 
+
+=======
+
 // 后台登录和退出
 Route::resource('/adminlogin','Admin\AdminLoginController');
 Route::group(['middleware'=>'login'],function(){
@@ -46,4 +49,14 @@ Route::group(['middleware'=>'login'],function(){
 	// 友情连接
 	Route::resource('/adminyouqing','Admin\YouqingController');
 });
+
+
+// 模板继承的练习  搭建后台
+Route::resource('/admin','Admin\AdminController');
+
+// 后台无限分类模块
+Route::resource("/admincates","Admin\CatesController");
+
+//前台首页
+Route::resource("/homeindex","Home\IndexController");
 
