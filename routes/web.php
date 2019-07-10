@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< dev
 
 
 
@@ -22,6 +21,8 @@
 
 
 
+
+=======
 
 // 后台登录和退出
 Route::resource('/adminlogin','Admin\AdminLoginController');
@@ -48,6 +49,16 @@ Route::group(['middleware'=>'login'],function(){
 	Route::resource('/adminyouqing','Admin\YouqingController');
 });
 
+
 =======
-<<<<<<< dev
+
+// 模板继承的练习  搭建后台
+Route::resource('/admin','Admin\AdminController');
+
+// 后台无限分类模块
+Route::resource("/admincates","Admin\CatesController");
+
+//前台首页
+Route::resource("/homeindex","Home\IndexController");
+
 
