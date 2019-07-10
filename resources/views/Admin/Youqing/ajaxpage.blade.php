@@ -1,13 +1,4 @@
-@extends("Admin.AdminPublic.publics")
-@section("main")
-<html>
- <head></head>
- <script type="text/javascript" src="/static/jquery-1.8.3.min.js"></script>
- <body> 
-  <div class="mws-panel grid_8"> 
-   <div class="mws-panel-header"> 
-    <span><i class="icon-table"></i> 友情链接列表</span> 
-   </div> 
+  <div class="mws-panel grid_8">  
    <div class="mws-panel-body no-padding"> 
     <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
       <div id="uid">
@@ -34,32 +25,12 @@
           </form>
            <a href="/adminyouqing/{{$row->id}}/edit" class="btn btn-success">修改</a>
          </td> 
-      @endforeach
+      
        </tr>
-
+        @endforeach
       </tbody>
      </table>
-   </div>
-     <div class="dataTables_paginate paging_full_numbers" id="pages">
-      @foreach($pp as $row)
-      <button class="btn btn-danger" onclick="page({{$row}})">{{$row}}</button>
-      @endforeach
+      </div>
      </div>
     </div> 
    </div> 
-  </div>
- </body>
- <script type="text/javascript">
-    function page(page){
-      // alert(page);
-      // 执行ajax
-      $.get('/adminyouqing',{page:page},function(data){
-          // alert(data);
-          // 把获取到的响应数据赋值给id为uid 的div
-          $('#uid').html(data);
-      });
-    }
- </script>
-</html>
-@endsection
-@section("title","友情链接列表")

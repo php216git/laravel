@@ -10,97 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 后台登录和退出
 Route::resource('/adminlogin','Admin\AdminLoginController');
  
-
+ 
 
 Route::group(['middleware'=>'login'],function(){
 	// 模板继承的练习  搭建后台
@@ -131,5 +44,13 @@ Route::group(['middleware'=>'login'],function(){
 
 	// 友情连接
 	Route::resource('/adminyouqing','Admin\YouqingController');
+
+	// 公告管理
+	Route::resource('/adminarticles','Admin\ArticleController');
+
+	//ajax删除
+	Route::get("/del","Admin\ArticleController@del");
+
+	
 });
 

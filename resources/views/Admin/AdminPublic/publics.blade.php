@@ -273,6 +273,14 @@
                         </ul>
                     </li>
 
+                     <li>
+                        <a href="#"><i class="icon-user"></i> 公告管理</a>
+                        <ul class="closed">
+                            <li><a href="/adminarticles/create">公告添加</a></li>
+                            <li><a href="/adminarticles">公告列表</a></li>
+                        </ul>
+                    </li>
+
                     <li>
                         <a href="#"><i class="icon-file"></i> 文章管理</a>
                         <ul class="closed">
