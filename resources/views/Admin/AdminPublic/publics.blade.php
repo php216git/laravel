@@ -282,18 +282,18 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="icon-file"></i> 文章管理</a>
-                        <ul class="closed">
-                            <li><a href="">文章添加</a></li>
-                            <li><a href="">文章列表</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
                         <a href="#"><i class="icon-file"></i> 商品管理</a>
                         <ul class="closed">
                             <li><a href="">商品添加</a></li>
                             <li><a href="">商品列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-file"></i> 广告管理</a>
+                        <ul class="closed">
+                            <li><a href="">广告添加</a></li>
+                            <li><a href="">广告列表</a></li>
                         </ul>
                     </li>
                 </ul>
