@@ -14,41 +14,11 @@ class YouqingController extends Controller
      */
     public function index(Request $request)
     {
-        // 显示列表页面
-        // $data = DB::table('youqing')->get();
-        // 获取数据总条数
-        $tot = DB::table('youqing')->count();
-        // dd($tot);
-        //每页显示的数据条数
-        $rev =2;
-        // 获取最大页
-        $maxpage=ceil($tot/$rev);
-        // 获取ajax 传递的参数 page
-        $page = $request->input('page');
-        // echo $page;
-        if(empty($page)){
-            $page=1;
-        }
-        // 获取偏移量
-        $offset = ($page-1)*$rev;
-        // 执行sql 语句   ->offset(分页偏移量)->limit(每页显示的数据条数);
-        $data = DB::table('youqing')->offset($offset)->limit($rev)->get();
-        // $data = DB::select("select * from youqing limit $offset,$rev");
-        // dd($data);
-        // 判断当前请求是否为ajax请求
-        if($request->ajax()){
-            // echo $page;die;
-            // 加载模板
-            return view("Admin.Youqing.ajaxpage",['data'=>$data]);
-        }
-        // echo $maxpage;
-        for($i=1;$i<$maxpage;$i++){
-            // 给数组赋值
-            $pp[$i] = $i;
-        }
-        // dd($pp);
-        // 加载模板
-        return view('Admin.Youqing.index',['pp'=>$pp,'data'=>$data]);
+         $c = $request->input('chen');
+        // 列表
+        $data = DB::table('youqing')->where('title','like','%'.$c.'%')->paginate(2);;
+        //加载模板
+        return view('Admin.Youqing.index',['data'=>$data,'request'=>$request->all()]);
     }
 
     /**

@@ -6,7 +6,7 @@
   <div class="mws-panel grid_8"> 
    <div class="mws-panel-header"> 
     <span>轮播图添加</span> 
-   </div> 
+   </div>  
    <div class="mws-panel-body no-padding"> 
     <form class="mws-form" action="/adminbanner" method="post" enctype="multipart/form-data"> 
       @if (count($errors) > 0)

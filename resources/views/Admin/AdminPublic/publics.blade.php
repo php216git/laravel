@@ -189,7 +189,7 @@
                 <div id="mws-user-functions">
                     <div id="mws-username">
                         Hello, {{session ('adminname')}}
-                    </div>
+                    </div> 
                     <ul>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Change Password</a></li>
@@ -284,18 +284,41 @@
                     <li>
                         <a href="#"><i class="icon-file"></i> 商品管理</a>
                         <ul class="closed">
-                            <li><a href="">商品添加</a></li>
-                            <li><a href="">商品列表</a></li>
+                            <li><a href="/adminshops/create">商品添加</a></li>
+                            <li><a href="/adminshops">商品列表</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="#"><i class="icon-file"></i> 广告管理</a>
                         <ul class="closed">
-                            <li><a href="">广告添加</a></li>
-                            <li><a href="">广告列表</a></li>
+                            <li><a href="/adminadvert/create">广告添加</a></li>
+                            <li><a href="/adminadvert">广告列表</a></li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="#"><i class="icon-file"></i> 网站底部管理</a>
+                        <ul class="closed">
+                            <li><a href="/dibu/create">底部添加</a></li>
+                            <li><a href="/dibu">底部列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-file"></i> 评论管理</a>
+                        <ul class="closed">
+                            <li><a href="/admincomment">评论列表</a></li>
+                        </ul>
+                    </li>
+
+                     <li>
+                        <a href="#"><i class="icon-file"></i> 订单管理</a>
+                        <ul class="closed">
+                            <li><a href="/adminorders">订单列表</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>         
         </div>

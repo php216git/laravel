@@ -1,0 +1,1 @@
+<a href="http://laravel.com/a?id={{$id}}&token={{$token}}">激活用户</a>

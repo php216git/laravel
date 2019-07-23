@@ -64,6 +64,14 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
-    ],
+		'qiniu' => [
+			'driver' => 'qiniu',//驱动名
+			'access_key' => env('QINIU_ACCESS_KEY', 'xxxxxxxxxxxxxxxx'),//key
+			'secret_key' => env('QINIU_SECRET_KEY', 'xxxxxxxxxxxxxxxx'),//secret值
+			'bucket' => env('QINIU_BUCKET', 'test'),//仓库名字
+			'domain' => env('QINIU_DOMAIN', 'xxx.clouddn.com'), // or host: //主机域名https://xxxx.clouddn.com
+		],
+
+	],
 
 ];

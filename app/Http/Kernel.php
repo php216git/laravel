@@ -58,6 +58,7 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 		//中间件注册 login 中间件的规则名
 		'login' => \App\Http\Middleware\LoginMiddleware::class,
+		'homelogin'=> \App\Http\Middleware\HomeLoginMiddleware::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

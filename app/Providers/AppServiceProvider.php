@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 //手动导入Schema类
 use Illuminate\Support\Facades\Schema;
+use DB;
 class AppServiceProvider extends ServiceProvider
 {
     /**

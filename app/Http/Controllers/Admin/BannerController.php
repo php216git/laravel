@@ -40,7 +40,7 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         // 执行添加方法
-        // 检测文件上传
+        // 检测文件上传 
          // dd($request->all());
         // $data=$request->except(['_token']);
 		//判断是否具有文件上传
@@ -102,7 +102,7 @@ class BannerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    { 
         // dd($request->all());
         // 执行修改方法
         // $data = $request->except('_token');

@@ -11,6 +11,13 @@
    <div class="mws-panel-body no-padding"> 
     <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
       <div id="uid">
+     <form action="/adminyouqing" method="get">
+     <div class="dataTables_filter" id="DataTables_Table_1_filter">
+      <label>
+        搜索:网站名 <input type="text" name="chen" aria-controls="DataTables_Table_1"  value="{{$request['chen'] or ''}}"/></label>
+      <input type="submit" class="btn btn-success" value="搜索">
+     </div>
+     </form>
      <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
       <thead> 
        <tr role="row">
@@ -41,25 +48,13 @@
      </table>
    </div>
      <div class="dataTables_paginate paging_full_numbers" id="pages">
-      @foreach($pp as $row)
-      <button class="btn btn-danger" onclick="page({{$row}})">{{$row}}</button>
-      @endforeach
+       {{$data->appends($request)->render()}}
      </div>
     </div> 
    </div> 
   </div>
  </body>
- <script type="text/javascript">
-    function page(page){
-      // alert(page);
-      // 执行ajax
-      $.get('/adminyouqing',{page:page},function(data){
-          // alert(data);
-          // 把获取到的响应数据赋值给id为uid 的div
-          $('#uid').html(data);
-      });
-    }
- </script>
+
 </html>
 @endsection
 @section("title","友情链接列表")
